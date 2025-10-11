@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <header>
+    <link rel="stylesheet" href="{% static 'article.css' %}">
+  </header>
+  <body class="article">
+    <div class="header">
+      <div>
+        <img class="logo" src="{% static 'bmw.png' %}" alt="BMW">
+        <h1>My Blog</h1>
+      </div>
+      <a href="/">Все статьи</a>
+    </div>
+      <div class="one-post">
+      <h1 class="post-title" >{{ post.title }}</h1>
+        <div class="article-info">
+        <div class="article-author">{{ post.author.username }}</div>
+        <div class="article-created-date">{{ post.created_date }}</div>
+        </div>
+        <p class="article-text">{{ post.text }}</p>
+      </div>
+  </body>
+</html>
